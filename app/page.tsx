@@ -74,14 +74,6 @@ export default function Home() {
     setIsProcessing(false);
   }
 
-  const sendTest = async () => {
-    const txHash = await (walletClient as any)?.sendTransaction({
-      to: "0x56983A4F0A00e09B80333e38A516D5023B954856",
-      value: parseEther('0.01'),
-    });
-    console.log(`User operation included: https://sepolia.etherscan.io/tx/${txHash}`)
-  }
-
   useEffect(() => {
     if (standardWalletClient !== undefined) {
       getSmartAccount();
@@ -100,7 +92,6 @@ export default function Home() {
         <>
           <div className="border border-slate-500 rounded p-4 flex flex-col gap-2 items-start">
             <button onClick={getSmartAccount} className="button">{isProcessing ? 'processing...' : 'get smart account'}</button>
-            <button onClick={sendTest} className="button">send test</button>
             {smartAccountClient === undefined ?
               <div>Smart account client not created</div>
               :
