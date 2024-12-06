@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Main = (props: Props) => {
-    const pimlicoUrl = `https://api.pimlico.io/v2/sepolia/rpc?apikey=pim_RTec7d4Wh1USs9JJs3NaG9`
+    const pimlicoUrl = `https://api.pimlico.io/v2/sepolia/rpc?apikey=${process.env.NEXT_PUBLIC_PIMLICO_API ?? ''}`
     const publicClient = usePublicClient();
     const { data: standardWalletClient } = useWalletClient();
 
