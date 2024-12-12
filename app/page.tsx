@@ -13,11 +13,11 @@ export default function Home() {
       <div className="w-full">
         <DynamicWidget />
       </div>
-      {account.isConnected ?
+      {account.isConnected &&
         <Main
           account={account}
         />
-        : <Login />
+        // : <Login />
       }
     </div>
   );

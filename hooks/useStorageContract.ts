@@ -48,6 +48,7 @@ const useStorageContract = (props: Props) => {
                 functionName: 'store',
                 args: [value]
             })
+            console.log('Store request', request);
             const storeHash = await props.walletClient.writeContract(request);
             console.log('Store hash', storeHash);
             return `Transaction executed`;
