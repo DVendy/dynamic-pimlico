@@ -6,7 +6,7 @@ export type ChainId = 'bera';
 export const APP_CONFIG: {
     environmentId: string,
 } = {
-    environmentId: '98edb18e-e221-49ee-b426-e95b858c3bc7',
+    environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENV!,
 }
 
 export const wagmiConfig = createConfig({
