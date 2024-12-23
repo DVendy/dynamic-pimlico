@@ -55,7 +55,6 @@ const Main = (props: Props) => {
             owners: [standardWalletClient],
             version: "1.4.1",
         });
-        console.log(`Safe account address: https://sepolia.etherscan.io/address/${_safeAccount.address}`);
 
         const _smartAccountClient = createSmartAccountClient({
             account: _safeAccount,
