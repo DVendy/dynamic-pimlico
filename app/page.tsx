@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-8 flex flex-col items-start gap-4">
-      <div className="w-full">
+      <div className="w-full flex items-center justify-center">
         <DynamicWidget />
       </div>
       {account.isConnected &&
