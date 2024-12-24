@@ -1,5 +1,5 @@
 import { createConfig, http } from 'wagmi';
-import { sepolia } from 'wagmi/chains';
+import { holesky, sepolia } from 'wagmi/chains';
 
 export type ChainId = 'bera';
 
@@ -10,9 +10,10 @@ export const APP_CONFIG: {
 }
 
 export const wagmiConfig = createConfig({
-    chains: [sepolia],
+    chains: [sepolia, holesky],
     transports: {
         [sepolia.id]: http(),
+        [holesky.id]: http(),
     },
 }
 );

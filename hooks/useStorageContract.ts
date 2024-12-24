@@ -9,7 +9,10 @@ interface Props {
 }
 
 const useStorageContract = (props: Props) => {
-    const contractAddress = '0x2331fb827792879D21e11f7e13bA0d57391393D5';
+    //sepolia
+    // const contractAddress = '0x2331fb827792879D21e11f7e13bA0d57391393D5';
+    //holesky
+    const contractAddress = '0xBd3565E8329685958234dD7416fE110fc3CC97cc';
 
     const retrieve = async () => {
         console.log('retrieve');
